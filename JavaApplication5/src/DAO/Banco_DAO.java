@@ -8,7 +8,7 @@ public class Banco_DAO {
 
     public class Conexao {
 
-        private static final String DB_TYPE = "mariadb"; // ou "mysql"
+        private static final String DB_TYPE = "mysql"; // ou "mysql"
         private static final String HOST = "localhost";
         private static final int PORT = 3306;
         private static final String DATABASE = "lista";
