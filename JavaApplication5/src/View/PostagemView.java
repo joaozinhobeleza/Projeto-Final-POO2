@@ -12,7 +12,7 @@ import DTO.Tarefa_DTO;
  * @author will
  */
 public class PostagemView extends javax.swing.JFrame {
-    
+
     private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(PostagemView.class.getName());
 
     /**
@@ -42,8 +42,6 @@ public class PostagemView extends javax.swing.JFrame {
         clear2 = new javax.swing.JButton();
         Titulo = new javax.swing.JTextField();
         jLabel5 = new javax.swing.JLabel();
-        ID1 = new javax.swing.JTextField();
-        jLabel6 = new javax.swing.JLabel();
         Prazo = new javax.swing.JTextField();
         jLabel7 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
@@ -51,8 +49,6 @@ public class PostagemView extends javax.swing.JFrame {
         jLabel8 = new javax.swing.JLabel();
         clear3 = new javax.swing.JButton();
         update = new javax.swing.JButton();
-        jLabel10 = new javax.swing.JLabel();
-        check = new javax.swing.JTextField();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         jMenuItem2 = new javax.swing.JMenuItem();
@@ -133,19 +129,6 @@ public class PostagemView extends javax.swing.JFrame {
         jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setText("Titulo da tarefa:");
 
-        ID1.setBackground(new java.awt.Color(51, 51, 51));
-        ID1.setFont(new java.awt.Font("sansserif", 1, 13)); // NOI18N
-        ID1.setForeground(new java.awt.Color(255, 255, 255));
-        ID1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ID1ActionPerformed(evt);
-            }
-        });
-
-        jLabel6.setFont(new java.awt.Font("sansserif", 1, 14)); // NOI18N
-        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel6.setText("ID:");
-
         Prazo.setBackground(new java.awt.Color(51, 51, 51));
         Prazo.setFont(new java.awt.Font("sansserif", 1, 13)); // NOI18N
         Prazo.setForeground(new java.awt.Color(255, 255, 255));
@@ -168,7 +151,7 @@ public class PostagemView extends javax.swing.JFrame {
         jLabel8.setText("Conteudo da mensagem:");
 
         clear3.setBackground(new java.awt.Color(51, 51, 51));
-        clear3.setText("jButton1");
+        clear3.setText("limpar");
         clear3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 clear3ActionPerformed(evt);
@@ -176,23 +159,10 @@ public class PostagemView extends javax.swing.JFrame {
         });
 
         update.setBackground(new java.awt.Color(51, 51, 51));
-        update.setText("jButton1");
+        update.setText("criar");
         update.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 updateActionPerformed(evt);
-            }
-        });
-
-        jLabel10.setFont(new java.awt.Font("sansserif", 1, 14)); // NOI18N
-        jLabel10.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel10.setText("Check:");
-
-        check.setBackground(new java.awt.Color(51, 51, 51));
-        check.setFont(new java.awt.Font("sansserif", 1, 13)); // NOI18N
-        check.setForeground(new java.awt.Color(255, 255, 255));
-        check.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                checkActionPerformed(evt);
             }
         });
 
@@ -247,50 +217,38 @@ public class PostagemView extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(118, 118, 118)
+                .addComponent(clear3, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(update, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(27, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 270, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                        .addComponent(jScrollPane1)
-                        .addComponent(jLabel5, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 270, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(Titulo)
-                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                    .addComponent(jLabel7)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(layout.createSequentialGroup()
+                            .addComponent(Prazo, javax.swing.GroupLayout.PREFERRED_SIZE, 400, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addContainerGap())
+                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(ID1, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jLabel6))
-                            .addGap(18, 18, 18)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(jLabel10)
-                                .addComponent(check, javax.swing.GroupLayout.PREFERRED_SIZE, 148, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGap(18, 18, 18)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(jLabel7)
-                                .addComponent(Prazo, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                .addGap(23, 23, 23))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(127, 127, 127)
-                .addComponent(clear3)
-                .addGap(18, 18, 18)
-                .addComponent(update)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 270, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                    .addComponent(jScrollPane1)
+                                    .addComponent(Titulo)
+                                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                                        .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 270, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(130, 130, 130))))
+                            .addGap(23, 23, 23)))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(14, 14, 14)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel6)
-                            .addComponent(jLabel7))
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(ID1, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(Prazo, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel10)
-                        .addGap(0, 0, 0)
-                        .addComponent(check, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap()
+                .addComponent(jLabel7)
+                .addGap(3, 3, 3)
+                .addComponent(Prazo, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabel5)
                 .addGap(0, 0, 0)
@@ -349,10 +307,6 @@ public class PostagemView extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_TituloActionPerformed
 
-    private void ID1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ID1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_ID1ActionPerformed
-
     private void PrazoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PrazoActionPerformed
 
     }//GEN-LAST:event_PrazoActionPerformed
@@ -365,33 +319,27 @@ public class PostagemView extends javax.swing.JFrame {
         // TODO add your handling code here:
         Tarefa_DTO objlogindto = new Tarefa_DTO();
 
-        String Check, prazo, titulo, conteudo;
-        
-        Check = check.getText();
-        prazo = Prazo.getText();
-        titulo = Titulo.getText();
-        conteudo = Conteudo.getText();
+        String prazo, titulo, conteudo;
+
+        objlogindto.setTitulo(Titulo.getText());
+        objlogindto.setConteudo(Conteudo.getText());
+        objlogindto.setPrazo(Prazo.getText());
 
         Lista_DAO objlogindao = new Lista_DAO();
 
         objlogindao.inserir(objlogindto);
 
-        LoginView login = new LoginView();
+        Tela_principal login = new Tela_principal();
         login.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_updateActionPerformed
 
     private void clear3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_clear3ActionPerformed
         // TODO add your handling code here:
-        check.setText("");
         Prazo.setText("");
         Titulo.setText("");
         Conteudo.setText("");
     }//GEN-LAST:event_clear3ActionPerformed
-
-    private void checkActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_checkActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_checkActionPerformed
 
     /**
      * @param args the command line arguments
@@ -421,21 +369,17 @@ public class PostagemView extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextArea Conteudo;
     private javax.swing.JTextField ID;
-    private javax.swing.JTextField ID1;
     private javax.swing.JTextField Nome_pessoa;
     private javax.swing.JTextField Nome_pessoa2;
     private javax.swing.JTextField Nome_usuario;
     private javax.swing.JTextField Prazo;
     private javax.swing.JTextField Titulo;
-    private javax.swing.JTextField check;
     private javax.swing.JButton clear2;
     private javax.swing.JButton clear3;
-    private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;

@@ -9,15 +9,14 @@ import javax.swing.JOptionPane;
 public class Lista_DAO {
 
     public void inserir(Tarefa_DTO lista) {
-        String sql = "INSERT INTO lista (check_list, titulo, conteudo, prazo) VALUES (?, ?, ?, ?)";
+        String sql = "INSERT INTO lista (titulo, conteudo, prazo) VALUES (?, ?, ?)";
 
         try (Connection conn = Banco_DAO.Conexao.getConnection();
              PreparedStatement stmt = conn.prepareStatement(sql)) {
 
-            stmt.setString(1, lista.getCheckList());
-            stmt.setString(2, lista.getTitulo());
-            stmt.setString(3, lista.getConteudo());
-            stmt.setString(4, lista.getPrazo());
+            stmt.setString(1, lista.getTitulo());
+            stmt.setString(2, lista.getConteudo());
+            stmt.setString(3, lista.getPrazo());
             stmt.executeUpdate();
 
         } catch (SQLException e) {
@@ -36,7 +35,6 @@ public class Lista_DAO {
             while (rs.next()) {
                 Tarefa_DTO l = new Tarefa_DTO();
                 l.setID(rs.getInt("id"));
-                l.setCheckList(rs.getString("check_list"));
                 l.setTitulo(rs.getString("titulo"));
                 l.setConteudo(rs.getString("conteudo"));
                 l.setPrazo(rs.getString("prazo"));
@@ -62,7 +60,6 @@ public class Lista_DAO {
             if (rs.next()) {
                 return new Tarefa_DTO(
                     rs.getInt("id"),
-                    rs.getString("check_list"),
                     rs.getString("titulo"),
                     rs.getString("conteudo"),
                     rs.getString("prazo")
@@ -77,16 +74,15 @@ public class Lista_DAO {
     }
 
     public void atualizar(Tarefa_DTO lista) {
-        String sql = "UPDATE lista SET check_list=?, titulo=?, conteudo=?, prazo=? WHERE id=?";
+        String sql = "UPDATE lista SET titulo= ?, conteudo= ?, prazo= ? WHERE id= ?";
 
         try (Connection conn = Banco_DAO.Conexao.getConnection();
              PreparedStatement stmt = conn.prepareStatement(sql)) {
 
-            stmt.setString(1, lista.getCheckList());
-            stmt.setString(2, lista.getTitulo());
-            stmt.setString(3, lista.getConteudo());
-            stmt.setString(4, lista.getPrazo());
-            stmt.setInt(5, lista.getID());
+            stmt.setString(1, lista.getTitulo());
+            stmt.setString(2, lista.getConteudo());
+            stmt.setString(3, lista.getPrazo());
+            stmt.setInt(4, lista.getID());
             stmt.executeUpdate();
 
         } catch (SQLException e) {

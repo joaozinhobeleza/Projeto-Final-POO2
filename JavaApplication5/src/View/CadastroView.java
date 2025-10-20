@@ -219,7 +219,7 @@ public class CadastroView extends javax.swing.JFrame {
 
         if (objlogindao.inserir(objlogindto) == true) {
             JOptionPane.showMessageDialog(null, "login bem sucedido");
-            Tela_principal tela = new Tela_principal();
+            LoginView tela = new LoginView();
             tela.setVisible(true);
 
             this.dispose();

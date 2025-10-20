@@ -6,7 +6,7 @@ import java.sql.SQLException;
 
 public class Banco_DAO {
 
-    public class Conexao {
+    public static class Conexao { // 👈 Tornar a classe estática
 
         private static final String DB_TYPE = "mysql"; // ou "mysql"
         private static final String HOST = "localhost";

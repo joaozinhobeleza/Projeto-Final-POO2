@@ -5,23 +5,14 @@ public class Tarefa_DTO {
     String Check_List, titulo, conteudo, prazo;
     int ID;
 
-    public Tarefa_DTO(int ID, String check_list, String titulo, String conteudo, String prazo) {
+    public Tarefa_DTO(int ID, String titulo, String conteudo, String prazo) {
         this.ID = ID;
-        this.Check_List = check_list;
         this.titulo = titulo;
         this.conteudo = conteudo;
         this.prazo = prazo;
     }
 
     public Tarefa_DTO() {
-    }
-
-    public String getCheckList() {
-        return Check_List;
-    }
-
-    public void setCheckList(String check_list) {
-        this.Check_List = check_list;
     }
 
     public String getTitulo() {

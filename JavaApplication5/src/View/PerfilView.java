@@ -89,7 +89,7 @@ public class PerfilView extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         update.setBackground(new java.awt.Color(51, 51, 51));
-        update.setText("jButton1");
+        update.setText("atualizar");
         update.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 updateActionPerformed(evt);
@@ -97,7 +97,7 @@ public class PerfilView extends javax.swing.JFrame {
         });
 
         clear.setBackground(new java.awt.Color(51, 51, 51));
-        clear.setText("jButton1");
+        clear.setText("limpar");
         clear.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 clearActionPerformed(evt);
@@ -105,7 +105,7 @@ public class PerfilView extends javax.swing.JFrame {
         });
 
         delete.setBackground(new java.awt.Color(51, 51, 51));
-        delete.setText("jButton1");
+        delete.setText("delete");
         delete.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 deleteActionPerformed(evt);
